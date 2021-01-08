@@ -20,12 +20,24 @@ Vísita  la página https://www.arduino.cc/en/software y descarga la versión de
 <div>
 <img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/06/preferences.png?w=722&quality=100&strip=all&ssl=1">
 </div>
+
 3. Abre el administrador de tarjetas (**Board Manager**). **Tools>Board>Boards Manager**
 <div>
 <img src="https://i2.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/06/boardsManager.png?w=628&quality=100&strip=all&ssl=1">
 </div>
+
 4. Busca **ESP32** y presional del botón de instalar.
 <div>
 <img src="https://i1.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/06/installing.png?w=786&quality=100&strip=all&ssl=1">
 </div>
-## Paso 2
+
+## Paso 2 - Sensor de humedad
+A continuación vamos a conectar el sensor de humedad para monitorear el cual nos va a permiitir conocer si es necesario "regar" o no la planta. En este caso vamos a utilizar un sersor capacitivo modelo **Moisture Sensor V1.0**, pero lo puedes sustituir por cualquier otro sensor de humedad. En el siguiente diagrama se muestra una posible conexión. En el repositorio existen dos archivos llamado `sensor.ino` y `sensor_pantalla.ino`. El último de estos permite mostrar los resultados en un pantalla tipo Oled la cual es opcional.
+
+<div>
+  <img src="https://wiki.dfrobot.com/Capacitive_Soil_Moisture_Sensor_SKU_SEN0193">
+</div>
+
+En está página encontrarás más información de como utilizarlo. https://wiki.dfrobot.com/Capacitive_Soil_Moisture_Sensor_SKU_SEN0193
+
+**Nota.** En este ejemplo está conectado a la entrada analógica **A0** pero lo puedes conectar al puerto analógico que tu eligas. 
