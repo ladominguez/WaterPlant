@@ -1,4 +1,4 @@
-# WaterPlant
+# Self-watering plant
 
 En este proyecto vamos a crear un sistema autómatico de monitoreo que mida de manera regular la humedad del suelo de una planta. En caso de que la humedad del suelo este por debajo de un umbral el sistema activará un sistema de riego. 
 
@@ -35,9 +35,15 @@ Vísita  la página https://www.arduino.cc/en/software y descarga la versión de
 A continuación vamos a conectar el sensor de humedad para monitorear el cual nos va a permiitir conocer si es necesario "regar" o no la planta. En este caso vamos a utilizar un sersor capacitivo modelo **Moisture Sensor V1.0**, pero lo puedes sustituir por cualquier otro sensor de humedad. En el siguiente diagrama se muestra una posible conexión. En el repositorio existen dos archivos llamado `sensor.ino` y `sensor_pantalla.ino`. El último de estos permite mostrar los resultados en un pantalla tipo Oled la cual es opcional.
 
 <div>
-  <img src="https://wiki.dfrobot.com/Capacitive_Soil_Moisture_Sensor_SKU_SEN0193">
+  <img src="https://raw.githubusercontent.com/DFRobot/DFRobotMediaWikiImage/master/Image/SEN0193-line.png">
 </div>
 
 En está página encontrarás más información de como utilizarlo. https://wiki.dfrobot.com/Capacitive_Soil_Moisture_Sensor_SKU_SEN0193
 
-**Nota.** En este ejemplo está conectado a la entrada analógica **A0** pero lo puedes conectar al puerto analógico que tu eligas. 
+**Nota.** En este ejemplo está conectado a la entrada analógica **GPIO34** pero lo puedes conectar al puerto analógico que tu eligas. 
+
+## Paso 3 - Carga y prueba tu programa
+En el siguiente video se explica como puedes cargar y probar tu programa. 
+
+[![IMAGE ALT TEXT HERE](screen.png)](https://youtu.be/0yp5iK4W0bY)
+
