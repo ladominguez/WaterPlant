@@ -47,3 +47,57 @@ En el siguiente video se explica como puedes cargar y probar tu programa.
 
 [![IMAGE ALT TEXT HERE](screen.png)](https://youtu.be/0yp5iK4W0bY)
 
+## Paso 4 - Servicios en la Nube y conexión WiFi
+
+Los datos de humedad registrados por el sensor serán almacenados de manera remota. Existen varios servicios, por ejemplo,
+
+* <a href="https://cloud.google.com/"> Google cloud. </a>
+* <a href="https://www.cloudmqtt.com/"> Cloud MQTT. </a>
+* <a href="https://io.adafruit.com"> Adafruit IO. </a>
+
+
+Para este proyecto vamos a utilizar **<a href="https://io.adafruit.com"> Adafruit IO. </a>** en conjunto con un servicio de monitorea conocido como **<a href="https://ifttt.com"> IFTTT (if this then that) </a>**. 
+
+<div>
+ <img src="./img/img0.png">
+ </div>
+
+Registrate en ambos sitios e instala la aplicación **IFTTT.** Además utilizando el **Administrador de Librerias** de **Arduino IDE**, instala las siguientes librerias. 
+
+*	Adafruit IO
+*	ArduinoHttpClient
+*	Adafruit MQTT
+ 
+ 1. Crea un **Feed** en **Adafruit IO Web**.
+ <div>
+  <img src="./img/Picture1.png">
+ </div>
+ 
+ 2. Haz click en Actions->Create New Feed. Nombralo **Humedad**.
+ 
+ <div>
+ <img src="./img/Picture2.png">
+ </div>
+ 
+ 3. Busca la llave de activación. Necesitarás añadir esta clave a código posteriormente. Descarga el código que se te proporcionará. Cambia los campos que se te indican, compílalo y cárgalo en tu controlador. 
+ 
+ 4. Conecta el **Feed de Adafruit a IFTTTT**. Ingresa a tu cuenta de **IFTTT** y da click en My Applets en la parte superior de la página. Selecciona **New Applet** en la parte derecha de la página y haz click en **+this**. Escribe en el cuadro de búsqueda Adafruit, y selecciona el servicio Monitor a feed on Adafruit IO.
+
+ <div>
+ <img src="./img/Picture3.png">
+ </div>
+ 
+5. Llena el menú como se muestra en la figura. <br>
+(**Nota.** Aquí tendrás que seleccionar la condición que consideres más conveniente dependiendo del nivel mínimo de humedad que consideres rasonable.)
+
+ <div>
+ <img src="./img/Picture4.png">
+ </div>
+
+6. Da click en +that y elige el servicio que deseas utilizar. Haz click en email o prueba alguno de los otros servicios que te ofrece. Presiona el botón de **Create action**, si lo deseas puedes personalizar el nombre de la **Applet**. Llena los datos que se indican.
+
+ <div>
+ <img src="./img/Picture5.png">
+ </div>
+ 
+ Revisa el código ``codigo_muestra.ino``. Este código envía un mensaje cada vez que presionas un botón conectado al **PIN 4**. Incorpora este código con el programa principal ``sensor.ino`` o ``sensor_pantalla.ino``,
